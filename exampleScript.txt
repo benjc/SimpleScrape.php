@@ -1,0 +1,7 @@
+<h2>[GRAB:BoxOfficeCountry] Box Office</h2>
+
+[REPEAT]
+	<div class="index">[GRAB:MovieRank]</div>
+	<h3>[GRAB:MovieName]</h3>
+	<h4>[GRAB:MovieCast]</h4>
+[/REPEAT]
