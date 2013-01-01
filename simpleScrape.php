@@ -111,7 +111,6 @@ class simpleScrape
 				if (!($this->matchLineAndExtractGrabs($scriptLine))) return false;
 			}
 
-
 			$scriptLineNo++;
 		}
 
@@ -138,11 +137,9 @@ class simpleScrape
 			// We're grabbing data from a piece of HTML
 			$tags = array();
 
-			$scriptLine = "[GRAB:__STARTTAG__]$scriptLine";
+			$scriptLine = "[GRAB:__STARTTAG__]".$scriptLine."[GRAB:__ENDTAG__]";
 
 			preg_match_all("/\[(?i:GRAB):.+?\]/", $scriptLine, $tagMatches, PREG_OFFSET_CAPTURE);
-
-			array_push($tagMatches[0], array("__ENDTAG__", strlen($scriptLine)));
 
 			// Store all grab tags in this line into $tags array
 			for($tagIndex = 0; ($tagIndex < count($tagMatches[0]) - 1); $tagIndex++)
