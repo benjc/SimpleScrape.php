@@ -4,7 +4,7 @@ require("simpleScrape.php");
 
 $scraper = new simpleScrape();
 
-$scraper->sourceURL = "http://www.fwfr.com";
+$scraper->sourceURL = "https://twitter.com/ProfBrianCox";
 $scraper->scriptPath = "exampleScript.txt";
 
 $values = $scraper->scrape();
